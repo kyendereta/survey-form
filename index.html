@@ -3,47 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Phenomenal Woman</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1 id="title">"I am Phenomenal" Survey Form</h1>
+    <h1 id="title">
+      "I am Phenomenal" <br />
+      Survey Form
+    </h1>
     <p id="description">
       <em>Thank you for taking the time to help us improve the platform</em>
     </p>
     <form id="survey-form">
-      <p><label for="Name">Name</label></p>
-      <p><input type="text" placeholder="Enter Your Name" /></p>
-      <p><label for="Email">Email</label></p>
-      <p><input type="email" placeholder="Enter Your Email" /></p>
-      <p><label for="age">Age (optional)</label></p>
-      <p><input type="number" placeholder="Age" min="18" max="60" /></p>
-      <p>What option best describes your current role?</p>
-      <p><select id="dropdown" name="role" class="form-control" required=""></p>
-        <option disabled="" selected="" value="">Select current role</option>
-        <option value="student">Student</option>
-        <option value="job">Full Time Job</option>
-        <option value="learner">Full Time Learner</option>
-        <option value="preferNo">Prefer not to say</option>
-        <option value="other">Other</option>
-     </select>
-     <p>Would you recommend a friend?</p>
-     <p><label for="definitely" checked><input type="radio">Definitely</label></p>
-     <p><label for="maybe"><input type="radio">Maybe</label></p>
-     <p><label for="not-sure"><input type="radio">Not Sure</label></p>
-     <p>What do you feel is your best phonemenal feature?</p>
-      <select id="dropdown" name="role" class="form-control" required="">
-        <option disabled="" selected="" value="">Select best feature</option>
-        <option value="student">Independent</option>
-        <option value="job">Conflict Resolution</option>
-        <option value="learner">Punctuality</option>
-        <option value="preferNo">Self Confidence</option>
-        <option value="other">Other</option>
-     </select>
-     <p>What would you like to see us venture in?(check all that apply)</p>
-     <p><label for="team-building"><input type="checkbox">Team Building</label></p>
-     <p><label for="charity"><input type="checkbox">Charity</label></p>
-     <p><label for="campaigns"><input type="checkbox">Campaign</label></p>
-     <p><label for="meetup"><input type="checkbox">Meetup</label></p>
+      <div class="form">
+        <div class="name">
+          <label for="Name" id="name-label">Name</label><br />
+          <input
+            class="width"
+            type="text"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          /><br />
+        </div>
+
+        <div class="email">
+          <label for="Email" id="email-label">Email</label><br />
+          <input
+            class="width"
+            type="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+          /><br />
+        </div>
+
+        <div class="age">
+          <label for="age" id="number-label">Age (optional)</label><br />
+          <input
+            class="width"
+            type="number"
+            id="number"
+            placeholder="Age"
+            min="18"
+            max="60"
+          /><br />
+        </div>
+
+        <div class="current-role">
+          <p>What option best describes your current role?</p>
+          <select
+            class="width"
+            id="dropdown"
+            name="role"
+            class="form-control"
+            required=""
+          >
+            <option disabled="" selected="" value="">
+              Select current role
+            </option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="recommend">
+          <p>Would you recommend a friend?</p>
+          <label for="definitely" checked
+            ><input type="radio" />Definitely</label
+          ><br />
+          <label for="maybe"><input type="radio" />Maybe</label><br />
+          <label for="not-sure"><input type="radio" />Not Sure</label>
+        </div>
+
+        <div class="phenomenal-feature">
+          <p>What do you feel is your best phonemenal feature?</p>
+          <select
+            class="width"
+            id="dropdown"
+            name="role"
+            class="form-control"
+            required=""
+          >
+            <option disabled="" selected="" value="">
+              Select best feature
+            </option>
+            <option value="student">Independent</option>
+            <option value="job">Conflict Resolution</option>
+            <option value="learner">Punctuality</option>
+            <option value="preferNo">Self Confidence</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="venture">
+          <p>What would you like to see us venture in?(check all that apply)</p>
+          <label for="team-building"
+            ><input value="team-building" type="checkbox" />Team Building</label
+          ><br />
+          <label for="charity"
+            ><input value="charity" type="checkbox" />Charity</label
+          ><br />
+          <label for="campaigns"
+            ><input value="campaign" type="checkbox" />Campaign</label
+          ><br />
+          <label for="meetup"
+            ><input value="meetup" type="checkbox" />Meetup</label
+          >
+        </div>
+
+        <div class="form-q" class="comments">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            class="width"
+            name="comment"
+            placeholder="Enter your comment here..."
+            id="comments"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <br />
+        </div>
+        <br /><br />
+        <button class="width" id="submit"><strong>Submit</strong></button>
+      </div>
     </form>
   </body>
 </html>
